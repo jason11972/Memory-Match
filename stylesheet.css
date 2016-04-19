@@ -60,7 +60,7 @@ body {
     font-size:40px;
     border:solid darkblue;
     list-style-type:none;
-    margin:5% 5% 5% 0;
+    margin:0;
     background: rgba(247, 184, 31, 0.5);
 }
 .statsbar {
@@ -89,4 +89,5 @@ body {
     margin:0;
     padding:0;
 }
+
 
