@@ -1,9 +1,9 @@
 header {
     width:100%;
-    height:14vh;
-    background-color:darkred;
-    color:ghostwhite;
-    font-size: 10vh;
+    height:16vh;
+    background-color:darkblue;
+    color:#f7b81f;
+    font-size: 6vh;
     text-align:center;
     font-family: "Sitka Banner"
     margin:-25% 0 10% 0;
@@ -13,23 +13,24 @@ header {
 .gamelogo {
     float:left;
     width: 14%;
-    height:115%;
-    margin:-5.5% -25% 0 0;
+    height:143%;
+    margin:-6.05% -12% 0 0;
 }
 
 .game-area {
-    width:80vw;
+    width:70vw;
     float:right;
     box-sizing:border-box;
     text-align:center;
     margin-top:-26%;
+    padding-right:5%;
 
 }
 .card  {
-    position:relative;
     display:inline-block;
-    max-width:20%;
-    max-height:40%;
+    max-width:17%;
+    margin:0 -5% 1% 3%;
+
 
 }
 .back {
@@ -42,7 +43,7 @@ header {
 }
 
 body {
-    background-image: url("images/horror_icons_by_greatyphoon-d6d5zme.jpg");
+    background-image: url("images/AdventureTime.jpg");
     background-repeat:no-repeat;
     background-size:100%;
     padding-top:0;
@@ -51,17 +52,19 @@ body {
 .backimage {
     width:50%;
     height:100%;
+    border:solid blue;
 
 }
 .statssidebar {
-    color:ghostwhite;
+    color:darkblue;
     font-size:40px;
-    border:solid ghostwhite;
+    border:solid darkblue;
     list-style-type:none;
     margin:5% 5% 5% 0;
+    background: rgba(247, 184, 31, 0.5);
 }
 .statsbar {
-    margin: 15% 75% 0 0;
+    margin: 7% 75% 0 0;
 }
 .games-played {
     margin-top:10%;
@@ -74,7 +77,9 @@ body {
 }
 .reset {
     font-size:40px;
-    margin: 5% 0 5% 20%;
+    margin: 5% 0 5% 10%;
+    color:#f7b81f;
+    background-color:darkblue;
 }
 .navbar {
     font-size:20px;
@@ -84,3 +89,4 @@ body {
     margin:0;
     padding:0;
 }
+
