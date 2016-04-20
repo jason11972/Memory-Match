@@ -1,20 +1,22 @@
 header {
     width:100%;
-    height:16vh;
-    background-color:darkblue;
-    color:#f7b81f;
-    font-size: 6vh;
+    height:18vh;
+    color:darkblue;
+    font-size: 5vh;
     text-align:center;
-    font-family: "Sitka Banner"
-    margin:-25% 0 10% 0;
     padding-bottom:1%;
+    background-color:darkblue;
+    background: rgba(247, 184, 31, 0.5);
+    border:solid darkblue;
+    font-family: "Comic Sans MS";
 
 }
 .gamelogo {
     float:left;
     width: 14%;
-    height:143%;
-    margin:-6.05% -12% 0 0;
+    height:110%;
+    margin:-3.5% -15% 0 0;
+    border:solid darkblue;
 }
 
 .game-area {
@@ -62,6 +64,7 @@ body {
     list-style-type:none;
     margin:0;
     background: rgba(247, 184, 31, 0.5);
+    font-family: "Comic Sans MS"
 }
 .statsbar {
     margin: 7% 75% 0 0;
@@ -80,14 +83,38 @@ body {
     margin: 5% 0 5% 10%;
     color:#f7b81f;
     background-color:darkblue;
+    font-family: "Comic Sans MS";
 }
 .navbar {
     font-size:20px;
     color:ghostwhite;
     list-style-type:none;
-    display:inline;
+    display:inline-flex;
     margin:0;
     padding:0;
-}
 
+}
+.play  {
+    color:white;
+    margin:3%;
+}
+.settings {
+    color:white;
+    margin:3%;
+}
+.about {
+    color:white;
+    margin:3%;
+}
+.front {
+    float:left;
+}
+.frontimage {
+    width:50%;
+    height:100%;
+    border:solid blue;
+    background-color:white;
+    display:inline-block;
+    margin:0 -5% 1% 3%;
+}
 
