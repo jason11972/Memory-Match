@@ -19,30 +19,22 @@ header {
 }
 
 .game-area {
-    width:70vw;
+    width:82%;
     float:right;
     box-sizing:border-box;
     text-align:center;
-    margin:-31% 6% 0 0;
+    margin:-31% -5% 0 0;
 
 
 }
-.card  {
-    display:inline-block;
-    max-width:15vw;
-    max-height:25vh;
-    float:left;
-    position:relative;
-    margin-left:15%;
 
-
-
-}
 .back {
-    float:left;
-    width:15vw;
-    height:25vh;
+    width:100%;
+    height:100%;
     position:absolute;
+    left:0;
+
+
 
 }
 .stats {
@@ -56,13 +48,9 @@ body {
     background-size:100%;
     padding-top:0;
     margin-top:0;
+    perspective:1200px;
 }
-.backimage {
-    width:50%;
-    height:100%;
-    border:solid blue;
 
-}
 .statssidebar {
     color:darkblue;
     font-size:40px;
@@ -75,13 +63,7 @@ body {
 .statsbar {
     margin: 7% 75% 0 0;
 }
-.games-played {
-    margin-top:10%;
-}
-.attempts {
-    margin-top:10%;
-}
-.accuracy {
+.games-played, .attempts, .accuracy {
     margin-top:10%;
 }
 .reset {
@@ -113,69 +95,92 @@ body {
     margin:3%;
 }
 .front {
-    float:left;
-    width:15vw;
-    height:25vh;
-    position:absolute;
-}
-.frontimage {
-    width:50%;
+    width:100%;
     height:100%;
-    border:solid blue;
+    position:absolute;
+    transform: rotate3D(0,1,0,180deg);
+    backface-visibility: hidden;
+    left:0;
+
+
+}
+.frontimage, .backimage {
+    width:100%;
+    height:100%;
     background-color:white;
-    display:inline-block;
+    margin:0;
+    padding:0;
+
+}
+.card1 {
+
+    margin-left:3%;
+
 }
 
 .card2 {
-    margin-left:13%;
+    margin-left: 0.5%;
+
 }
 .card3 {
-    margin-left:26%;
+    margin-left: 0.5%;
 }
 .card4 {
-    margin-left:39%;
+    margin-left: 0.5%;
 }
 .card5 {
-    margin-left: 52%;
+    margin-left: 0.5%;
 }
 .card6 {
-    margin-left:65%;
+    margin-left: 0.5%;
 }
 .card7 {
-    margin-top:19%;
+    margin-top:0.5%;
+    margin-left: 3%;
 }
 .card8 {
-    margin:19% 0 0 13%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card9 {
-    margin:19% 0 0 26%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card10 {
-    margin:19% 0 0 39%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card11 {
-    margin:19% 0 0 52%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card12 {
-    margin:19% 0 0 65%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card13 {
-    margin-top:38%;
+    margin-top:0.5%;
+    margin-left: 3%;
 }
 .card14 {
-    margin:38% 0 0 13%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card15 {
-    margin:38% 0 0 26%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card16 {
-    margin:38% 0 0 39%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card17 {
-    margin:38% 0 0 52%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .card18 {
-    margin:38% 0 0 65%;
+    margin-top:0.5%;
+    margin-left: 0.5%;
 }
 .aboutbody {
     background-image: url("images/adventure-time-wallpaper-4.jpg");
@@ -187,4 +192,21 @@ body {
 }
 .aboutdescription {
     margin-top:25%;
+}
+.flipcard {
+    transform:rotateY(180deg);
+    border:3px solid darkblue;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18 {
+    transition-duration:1.25s;
+    transform-style:preserve-3d;
+    display:inline-block;
+    float:left;
+    width:13.66%;
+    height:25vh;
+    border:3px solid darkblue;
+}
+.card-flip {
+    transform:rotate3D(0,1,0,180deg);
 }
