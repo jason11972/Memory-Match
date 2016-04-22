@@ -24,8 +24,6 @@ header {
     box-sizing:border-box;
     text-align:center;
     margin:-31% -5% 0 0;
-
-
 }
 
 .back {
@@ -33,13 +31,9 @@ header {
     height:100%;
     position:absolute;
     left:0;
-
-
-
 }
 .stats {
     float:left;
-
 }
 
 body {
@@ -80,7 +74,6 @@ body {
     display:inline-flex;
     margin:0;
     padding:0;
-
 }
 .play  {
     color:white;
@@ -101,8 +94,6 @@ body {
     transform: rotate3D(0,1,0,180deg);
     backface-visibility: hidden;
     left:0;
-
-
 }
 .frontimage, .backimage {
     width:100%;
@@ -110,17 +101,13 @@ body {
     background-color:white;
     margin:0;
     padding:0;
-
 }
 .card1 {
-
     margin-left:3%;
-
 }
 
 .card2 {
     margin-left: 0.5%;
-
 }
 .card3 {
     margin-left: 0.5%;
