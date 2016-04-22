@@ -79,7 +79,8 @@ var memory_game_images=['images/jake1.png',
      } else{
              //if the images above dont match then it resets the value of both cards back to null//
          console.log("cards dont match");
-         setTimeout(reset_cards, 2000);
+         //set the counter to 1250 because 2 seconds feels too long.
+         setTimeout(reset_cards, 1200);
      }
  }
 
