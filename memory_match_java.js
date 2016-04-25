@@ -13,14 +13,26 @@ $(document).ready(function(){
         console.log('this is what this = ',this);
         card_clicked(this)
     });
+
+    $(".reset").click(function() {
+        console.log("This is the reset button");
+        games_played++;
+        reset_stats();
+        display_stats();
+        reset_all_cards();
+    });
 });
 
 /* Stuff related to Scope*/
 
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 9;
+var total_possible_matches = 9; //this number can be changed if you add more cards to the game//
 var match_counter = 0;
+var matches=0;
+var attempts=0;
+var accuracy=0;
+var games_played=0;
 var match_attempts=0;
 var match_accuracy=0;
 var memory_game_images=['images/jake1.png',
@@ -63,6 +75,8 @@ var memory_game_images=['images/jake1.png',
      }
      if (first_card_clicked.find('.front img').attr('src') == second_card_clicked.find('.front img').attr('src') ){
          match_counter++;
+         attempts++;
+         display_stats();
          //since they match, next step is resetting the first and second card clicked back to null
          first_card_clicked = null;
          second_card_clicked = null;
@@ -79,6 +93,8 @@ var memory_game_images=['images/jake1.png',
      } else{
              //if the images above dont match then it resets the value of both cards back to null//
          console.log("cards dont match");
+         attempts++;
+         display_stats();
          //set the counter to 1250 because 2 seconds feels too long.
          setTimeout(reset_cards, 1200);
      }
@@ -93,5 +109,38 @@ function reset_cards() {
     first_card_clicked = null;
     second_card_clicked = null;
 }
+function reset_all_cards() {
+    //resets all cards to face down status//
+    $('.flipcard').removeClass('flipcard');
+    first_card_clicked = null;
+    second_card_clicked = null;
+}
+//displayed status of the game//
+function display_stats() {
+
+    if(attempts!=0) {
+        accuracy=Math.floor(match_counter/attempts*100);
+    }else {
+        accuracy=0;
+    }
+
+    //takes .games-played value and puts it in text form into the var declared above called games_played//
+    $('.games-played').text(games_played);
+    //takes attempts value and displays it in attempts var//
+    $('.attempts').text(attempts);
+    //takes the accuracy, displays it in accuracy var and adds the string "%" to the number so it looks like a percentage//
+    $('.accuracy').text(accuracy + "%");
+}
+//function that kicks in when you hit the reset game button.  resets the counters on the stats to zero//
+function reset_stats() {
+    accuracy = 0;
+    match_counter = 0;
+    attempts = 0;
+    //it then calls the display status function listed above because you want it to display all the stats as zeroed out for the reset//
+    display_stats()
+    }
+
+//first the reset button is clicked, then function is called that does all the items that follow-increment,reset stats and cards//
+
 
 
