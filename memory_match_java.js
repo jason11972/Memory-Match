@@ -21,6 +21,7 @@ $(document).ready(function(){
         display_stats();
         reset_all_cards();
     });
+
 });
 
 /* Stuff related to Scope*/
@@ -53,6 +54,20 @@ var memory_game_images=['images/jake1.png',
     'images/lemongrab1.png',
     'images/lsp1.jpg',
     'images/cinnamonbun1.png'];
+var selected = [];
+for (var i =0; i < 9; i++) {
+    var randomInd = floor(random(memory_game_images.length));
+    var face = memory_game_images[randomInd];
+    selected.push(face);
+    selected.push(face);
+    //remove from array
+    memory_game_images.splice(randomInd, 1);
+}
+selected.sort(function() {
+    return 0.5 - random();
+
+});
+
 
 
  function card_clicked(card) {
@@ -87,7 +102,8 @@ var memory_game_images=['images/jake1.png',
          //match counter should be maxed at 9...18 cards means 9 total matches possible. if the counter reaches 9, then it will equal\
          //total possible matches that's also set to 9.  it would then declare you the winner//
          if (match_counter === total_possible_matches) {
-             (console.log("user has won the game"))
+             (console.log("user has won the game"));
+             alert('YOU WIN!!!!');
 
          }
      } else{
@@ -130,6 +146,12 @@ function display_stats() {
     $('.attempts').text(attempts);
     //takes the accuracy, displays it in accuracy var and adds the string "%" to the number so it looks like a percentage//
     $('.accuracy').text(accuracy + "%");
+    if(match_counter === total_possible_matches) {
+        $('#victory').fadeIn();
+
+    }
+
+
 }
 //function that kicks in when you hit the reset game button.  resets the counters on the stats to zero//
 function reset_stats() {
@@ -139,7 +161,6 @@ function reset_stats() {
     //it then calls the display status function listed above because you want it to display all the stats as zeroed out for the reset//
     display_stats()
     }
-
 //first the reset button is clicked, then function is called that does all the items that follow-increment,reset stats and cards//
 
 

@@ -197,3 +197,9 @@ body {
 .card-flip {
     transform:rotate3D(0,1,0,180deg);
 }
+
+
+#victory h3 {
+    color: black;
+    font-family: "Comic Sans MS", serif;
+}
