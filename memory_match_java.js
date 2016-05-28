@@ -9,13 +9,17 @@
  to flip the images and leave the container alone but it's harder to do that*/
 
 $(document).ready(function(){
+    shuffleCards();
+    newShuffled();
+    console.log('this is ' , newArray);
+
+
     $(".card").click(function(){
-        console.log('this is what this = ',this);
-        card_clicked(this)
+        card_clicked(this);
+
     });
 
     $(".reset").click(function() {
-        console.log("This is the reset button");
         games_played++;
         reset_stats();
         display_stats();
@@ -54,20 +58,25 @@ var memory_game_images=['images/jake1.png',
     'images/lemongrab1.png',
     'images/lsp1.jpg',
     'images/cinnamonbun1.png'];
-var selected = [];
-for (var i =0; i < 9; i++) {
-    var randomInd = floor(random(memory_game_images.length));
-    var face = memory_game_images[randomInd];
-    selected.push(face);
-    selected.push(face);
-    //remove from array
-    memory_game_images.splice(randomInd, 1);
+
+
+var newArray = [];
+function shuffleCards() {
+    var image_array_length = memory_game_images.length;
+    for (var i = 0; i < image_array_length; i++) {
+        var randomNum = memory_game_images.splice(Math.floor(Math.random() * memory_game_images.length), 1);
+        newArray.push(randomNum[0]);
+
+    }
 }
-selected.sort(function() {
-    return 0.5 - random();
+function newShuffled() {
+    for (var i = 1; i <= newArray.length; i++) {
+    var currentCard = ".card" + i;
+        $(currentCard).hasClass('front').find('img').attr('src', newArray[i-1]);
+        console.log(currentCard);
 
-});
-
+    }
+}
 
 
 function card_clicked(card) {
@@ -98,7 +107,7 @@ function card_clicked(card) {
 
         //this compares the source image for the first card clicked to the source image of the second card clicked and if\
         //equal then it increments the match counter by one//
-        console.log("This is the match counter", match_counter)
+        console.log("This is the match counter", match_counter);
         //match counter should be maxed at 9...18 cards means 9 total matches possible. if the counter reaches 9, then it will equal\
         //total possible matches that's also set to 9.  it would then declare you the winner//
         if (match_counter === total_possible_matches) {
@@ -124,12 +133,14 @@ function reset_cards() {
     second_card_clicked.removeClass('flipcard');
     first_card_clicked = null;
     second_card_clicked = null;
+    shuffleCards();
 }
 function reset_all_cards() {
     //resets all cards to face down status//
     $('.flipcard').removeClass('flipcard');
     first_card_clicked = null;
     second_card_clicked = null;
+    shuffleCards();
 }
 //displayed status of the game//
 function display_stats() {
