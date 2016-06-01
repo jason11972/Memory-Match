@@ -11,6 +11,7 @@
 $(document).ready(function(){
     shuffleCards();
     newShuffled();
+    // tellTime();
     console.log('this is ' , newArray);
 
 
@@ -77,6 +78,12 @@ function newShuffled() {
 
     }
 }
+// function tellTime() {
+//     var now = new Date();
+//     var theHr = now.getHours();
+//     var theMin = now.getMinutes();
+//     alert("Current time: " + theHr + theMin);
+// }
 
 
 function card_clicked(card) {
