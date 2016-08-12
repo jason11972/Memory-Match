@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Memory Match</title>
+    <title>Memory Matching Time</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <link type ="text/css" rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://learning-fuze.github.io/memory_match/v0.1/script.js">
+
+
+    <script src="memory_match_java.js"></script>
+
 </head>
 <header>
     <br><img class="gamelogo" src="images/gamelogo.png"/>MEMORY MATCHING TIME</br>
@@ -28,124 +33,121 @@
         <li class="attempts">Attempts:</li>
         <li class="accuracy">Accuracy:</li>
         <button class="reset" type="button">Reset Game!</button>
+        <!--Reset Game Button-->
     </ul>
 
 
     </div>
 
-</div>
-
-<!--Reset Game Button-->
-
-    </div>
 
 <!--Game Area-->
 <div class="game-area">
     <!--Card One-->
-    <div class="card1">
+
+    <div class="card1 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/jake1.png"/></div>
 
     </div>
 
 <!--Card Two-->
-    <div class="card2">
+    <div class="card2 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/jake1.png"/></div>
 
     </div>
     <!--Card Three-->
-    <div class="card3">
+    <div class="card3 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/finn1.jpg"/></div>
 
     </div>
     <!--Card Four-->
-    <div class="card4">
+    <div class="card4 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/finn1.jpg"/></div>
 
     </div>
     <!--Card Five-->
-    <div class="card5">
+    <div class="card5 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/iceking1.jpg"/></div>
 
     </div>
     <!--Card Six-->
-    <div class="card6">
+    <div class="card6 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/iceking1.jpg"/></div>
 
     </div>
     <!--Card Seven-->
-    <div class="card7">
+    <div class="card7 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/princessbubblegum.png"/></div>
 
     </div>
     <!--Card Eight-->
-    <div class="card8">
+    <div class="card8 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/princessbubblegum.png"/></div>
 
     </div>
     <!--Card Nine-->
-    <div class="card9">
+    <div class="card9 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/beemo1.png"/></div>
 
     </div>
     <!--Card Ten-->
-    <div class="card10">
+    <div class="card10 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/beemo1.png"/></div>
 
     </div>
     <!--Card Eleven-->
-    <div class="card11">
+    <div class="card11 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/marceline1.png"/></div>
 
     </div>
     <!--Card Twelve-->
-    <div class="card12">
+    <div class="card12 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/marceline1.png"/></div>
 
     </div>
     <!--Card Thirteen-->
-    <div class="card13">
+    <div class="card13 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/lemongrab1.png"/></div>
 
     </div>
     <!--Card Fourteen-->
-    <div class="card14">
+    <div class="card14 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/lemongrab1.png"/></div>
 
     </div>
     <!--Card Fifteen-->
-    <div class="card15">
+    <div class="card15 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/lsp1.jpg"/></div>
 
     </div>
     <!--Card Sixteen-->
-    <div class="card16">
+    <div class="card16 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/lsp1.jpg"/></div>
 
     </div>
     <!--Card Seventeen-->
-    <div class="card17">
+    <div class="card17 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/cinnamonbun1.png"/></div>
 
     </div>
     <!--Card Eighteen-->
-    <div class="card18">
+    <div class="card18 card">
         <div class="back"><img class="backimage" src="images/cardback.jpg"/></div>
         <div class="front"><img class="frontimage" src="images/cinnamonbun1.png"/></div>
 
@@ -153,7 +155,6 @@
 
 <!--comment-->
 </div>
-
 
 </body>
 
