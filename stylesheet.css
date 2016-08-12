@@ -1,0 +1,190 @@
+header {
+    width:100%;
+    height:18vh;
+    color:darkblue;
+    font-size: 4vh;
+    text-align:center;
+    background-color:darkblue;
+    background: rgba(247, 184, 31, 0.5);
+    border:solid darkblue;
+    font-family: "Comic Sans MS";
+
+}
+.gamelogo {
+    float:left;
+    width: 14%;
+    height:99%;
+    margin:-2.9% -15% 0 0;
+    border:solid darkblue;
+}
+
+.game-area {
+    width:70vw;
+    float:right;
+    box-sizing:border-box;
+    text-align:center;
+    margin:-31% 6% 0 0;
+
+
+}
+.card  {
+    display:inline-block;
+    max-width:15vw;
+    max-height:25vh;
+    float:left;
+    position:relative;
+    margin-left:15%;
+
+
+
+}
+.back {
+    float:left;
+    width:15vw;
+    height:25vh;
+    position:absolute;
+
+}
+.stats {
+    float:left;
+
+}
+
+body {
+    background-image: url("images/adventure-time-wallpaper-4.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    padding-top:0;
+    margin-top:0;
+}
+.backimage {
+    width:50%;
+    height:100%;
+    border:solid blue;
+
+}
+.statssidebar {
+    color:darkblue;
+    font-size:40px;
+    border:solid darkblue;
+    list-style-type:none;
+    margin:0;
+    background: rgba(247, 184, 31, 0.5);
+    font-family: "Comic Sans MS"
+}
+.statsbar {
+    margin: 7% 75% 0 0;
+}
+.games-played {
+    margin-top:10%;
+}
+.attempts {
+    margin-top:10%;
+}
+.accuracy {
+    margin-top:10%;
+}
+.reset {
+    font-size:40px;
+    margin: 5% 0 5% 10%;
+    color:#f7b81f;
+    background-color:darkblue;
+    font-family: "Comic Sans MS";
+}
+.navbar {
+    font-size:20px;
+    color:ghostwhite;
+    list-style-type:none;
+    display:inline-flex;
+    margin:0;
+    padding:0;
+
+}
+.play  {
+    color:white;
+    margin:3%;
+}
+.settings {
+    color:white;
+    margin:3%;
+}
+.about {
+    color:white;
+    margin:3%;
+}
+.front {
+    float:left;
+    width:15vw;
+    height:25vh;
+    position:absolute;
+}
+.frontimage {
+    width:50%;
+    height:100%;
+    border:solid blue;
+    background-color:white;
+    display:inline-block;
+}
+
+.card2 {
+    margin-left:13%;
+}
+.card3 {
+    margin-left:26%;
+}
+.card4 {
+    margin-left:39%;
+}
+.card5 {
+    margin-left: 52%;
+}
+.card6 {
+    margin-left:65%;
+}
+.card7 {
+    margin-top:19%;
+}
+.card8 {
+    margin:19% 0 0 13%;
+}
+.card9 {
+    margin:19% 0 0 26%;
+}
+.card10 {
+    margin:19% 0 0 39%;
+}
+.card11 {
+    margin:19% 0 0 52%;
+}
+.card12 {
+    margin:19% 0 0 65%;
+}
+.card13 {
+    margin-top:38%;
+}
+.card14 {
+    margin:38% 0 0 13%;
+}
+.card15 {
+    margin:38% 0 0 26%;
+}
+.card16 {
+    margin:38% 0 0 39%;
+}
+.card17 {
+    margin:38% 0 0 52%;
+}
+.card18 {
+    margin:38% 0 0 65%;
+}
+.aboutbody {
+    background-image: url("images/adventure-time-wallpaper-4.jpg");
+    text-align:center;
+    color:darkblue;
+    font-size:20px;
+    font-family: "Comic Sans MS";
+    background-repeat:no-repeat;
+}
+.aboutdescription {
+    margin-top:25%;
+}
