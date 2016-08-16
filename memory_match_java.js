@@ -119,7 +119,7 @@ function card_clicked(card) {
         //total possible matches that's also set to 9.  it would then declare you the winner//
         if (match_counter === total_possible_matches) {
             (console.log("user has won the game"));
-            alert('YOU WIN!!!!');
+            // alert('YOU WIN!!!!');
 
         }
     } else{
