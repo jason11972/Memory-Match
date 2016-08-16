@@ -73,7 +73,7 @@ function shuffleCards() {
 function newShuffled() {
     for (var i = 1; i <= newArray.length; i++) {
     var currentCard = ".card" + i;
-        $(currentCard).hasClass('front').find('img').attr('src', newArray[i-1]);
+        $(currentCard).find('.front').find('img').attr('src', newArray[i-1]);
         console.log(currentCard);
 
     }
